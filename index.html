@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> formulario para adoçao de animais </title>
+    </head>
+<style>
+ body {
+  background-color: lightgrey ;
+  margin-inline: 150px;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: justify;
+} 
+
+</style>
+<body>
+ <h1> Adoçao de animais - CSS canil</h1>
+ <header>
+                        
+    <p> Olá, ficamos muito contentes pela sua opção em adotar e por escolher um bichinho do CSS canil  </p>
+    
+    
+    
+    <p>Para  adotar um dos nossos cães, é preciso ter mais de 21 anos, preencher este questionário, enviar fotos de onde irá morar e, se acertada a adoção,  assinar um termo de responsabilidade, além de nos mandar notícias dele  de vez em quando. Esse é o processo padrão de adoção responsável  utilizado por outras ONGs também.</p>
+    
+    
+    
+    <p>Se desejar participar do processo, pedimos que responda às questões abaixo, que fazem parte do protocolo de adoção. 
+    
+    
+    <p>Então, por favor, <strong>responda todas as perguntas com cuidado e atenção</strong>. Analisaremos as suas respostas com cuidado e daremos um retorno assim que possível!</p>
+                       
+</header>
+
+<hr>           
+    
+                    <form method="post" enctype="multipart/form-data" id="adoptionForm">
+                        
+                        <fieldset class="form-group">
+                            <label for="mainAdopterName">Nome completo</label>
+                            <input type="text" id="mainAdopterName" name="mainAdopterName" class="form-control" placeholder="Seu nome completo">
+                            <div class="error"></div>
+                        </fieldset>
+                        
+                        <fieldset class="form-group">
+                            <label for="chosenAnimal">Animal a ser adotado</label>
+                            <input type="text" id="chosenAnimal" name="chosenAnimal" class="form-control">
+                            <div class="error"></div>
+                        </fieldset>
+        
+                        <fieldset class="form-group">
+                        <label for="adopterEmail">E-mail</label>
+                            <input type="email" id="adopterEmail" name="adopterEmail" class="form-control" placeholder="Seu melhor e-mail">
+                            <div class="error"></div>
+                        </fieldset>
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                <fieldset class="form-group">
+                                    <label for="mainDddInput">DDD</label>
+                                    <input type="text" id="mainDddInput" name="mainDddInput" class="form-control" placeholder="2 dígitos" maxlength="2">
+                                    <div class="error"></div>
+                                </fieldset>
+                            </div>
+                            <fieldset class="form-group">
+                                <label for="adopterEmail">telefone/ WhatsApp</label>
+                                    <input type="email" id="adopterEmail" name="adopterEmail" class="form-control" placeholder="Seu melhor e-mail">
+                                    <div class="error"></div>
+                                </fieldset>
+                            <div class="col-md-5">
+                                <fieldset class="form-group birthday_field">
+                                    <label for="mainAdopterBirthday">Data de nascimento</label>
+                                    <input type="date" id="birthday" name="birthday">
+                                    <div class="error"></div>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col-md-6">
+                                <fieldset class="form-group">
+                                    <label for="adopterInstagram">Instagram (opcional)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                        </div>
+                                        <input name="adopterInstagram" id="adopterInstagram" type="text" class="form-control">
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset class="form-group">
+                                    <label for="adopterFacebook">Facebook (opcional)</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">facebook.com/</span>
+                                        </div>
+                                        <input name="adopterFacebook" id="adopterFacebook" type="text" class="form-control">
+                                    </div>
+                                    <fieldset class="form-group">
+                                        <label for="adopterAddress">Endereço completo (rua, número, complemento)</label>
+                                        <input type="text" id="adopterAddress" name="adopterAddress" class="form-control" placeholder="Seu endereço completo">
+                                        <div class="error"></div>
+                                    </fieldset>
+            
+                                    <fieldset class="form-group">
+                                        <label for="adopterNeighborhood">Bairro</label>
+                                        <input type="text" id="adopterNeighborhood" name="adopterNeighborhood" class="form-control" placeholder="Seu bairro">
+                                        <div class="error"></div>
+                                    </fieldset>
+            
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <fieldset class="form-group">
+                                                <label for="adopterCity">Cidade</label>
+                                                <input type="text" id="adopterCity" name="adopterCity" class="form-control" placeholder="Sua cidade">
+                                                <div class="error"></div>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <fieldset class="form-group">
+                                                <label for="adopterState">UF</label>
+                                                <input type="text" id="adopterState" name="adopterState" class="form-control" placeholder="UF" minlength="2" maxlength="2">
+                                                <div class="error"></div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+            
+                            </fieldset>
+                        </div>   
+                        <fieldset class="form-group">
+                            <label for="animalRole">1. Você está adotando um cão para ser:</label>
+                            <select class="form-control question" id="animalRole" name="animalRole">
+                                <option></option>
+                                <option>Companhia</option>
+                                <option>Guarda</option>
+                                <option>Outro</option>
+                            </select>
+                            <div class="error"></div>                       
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="typeOfResidence">2. Mora em casa ou apartamento?</label>
+                            <select class="form-control question" id="typeOfResidence" name="typeOfResidence">
+                                <option></option>
+                                <option>Casa</option>
+                                <option>Apartamento</option>
+                            </select>
+                            <div class="error"></div>
+                        </fieldset>
+
+                        <fieldset class="form-group">
+                            <label for="animalsAllowed">3. Você tem certeza que é permitido animais no imóvel?</label>
+                            <select class="form-control question" id="animalsAllowed" name="animalsAllowed">
+                                <option></option>
+                                <option>Não</option>
+                                <option>Sim, já verifiquei e tenho certeza!</option>
+                            </select>
+                            <div class="error"></div>
+                        </fieldset>  
+                        <fieldset class="form-group">
+                            <label for="question3">4. Já há outros animais na casa? Se sim, quais? </label>
+                            <textarea name="question3" id="question3" cols="30" rows="2" class="form-control question"></textarea>
+                            <div class="error"></div>
+                        </fieldset> 
+                        <fieldset class="form-group">
+                            <label for="question12">5. Poderá arcar com os custos de ração de qualidade, vermifugação, vacinação, castração e assistência veterinária? Qual seria sua atitude se ele adoecesse ou sofresse algum acidente?</label>
+                            <textarea name="question12" id="question12" cols="30" rows="2" class="form-control question"></textarea>
+                            <div class="error"></div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary btn-lg submit" name="submitButton">Enviar</button>
+                        <div class="error"></div>
+                        <br>
+                        <div class="form-loading">
+                            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+                            
+                        
+
+
+
+</body>
+    </html>
